@@ -29,6 +29,13 @@ long long count (long long n){
 		else return 1+count(n/2);
 	}
 }
+/* 1 2 3 4 5 --- count(n-1)
+   1 2 x 1 2 --- 1+count(n/2)
+   1 x x 1 x --- 	1+count(n/2)
+   x x x x x ---       1
+   			     ------------------
+   			     1+1+1=3
+*/
 
 
 int main(int argc, char const *argv[])
